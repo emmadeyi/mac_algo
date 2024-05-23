@@ -205,7 +205,8 @@ class TradingSimulator:
             print(f"Open {order['type']} order PnL: {order_pnl}. Open Price: {order['open_price']}, Open Time: {order['open_time']} ")
 
         return {
-            'equity': round(self.equity, 7),
+            'Initial equity': round(self.initial_equity, 7),
+            'Current equity': round(self.equity, 7),
             'pnl': round((self.equity - self.initial_equity), 7),
             'total_trades': total_trades,
             'winning_trades': winning_trades,
